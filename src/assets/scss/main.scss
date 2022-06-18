@@ -1,0 +1,74 @@
+@import '../../../node_modules/modern-normalize/modern-normalize.css';
+@import './base/fonts';
+//@import './base/normalize';
+@import './base/container';
+@import './base/header';
+@import './base/mobile-menu';
+@import './base/dropdown';
+@import './base/acordion';
+@import './base/footer';
+@import './base/page-content';
+@import './corporative/deposits';
+@import './corporative/credits';
+@import './corporative/operations';
+@import './corporative/accountopen';
+@import './corporative/ved';
+@import './corporative/specialchecks';
+@import './corporative/garanty';
+@import './corporative/distance-services';
+@import './client/safeboxes';
+@import './corporative/def-slider';
+@import '../css/def-slider.css';
+@import '../css/slick.css';
+
+
+
+body {
+    margin: 0px;
+}
+button:hover,
+button:focus {
+    cursor: pointer;
+}
+button:active{
+    background: #B94C40;
+}
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a, a:hover, a:focus, a:active { 
+      text-decoration: none; 
+      color: inherit; 
+ }
+
+// img {
+//     display: block;
+// }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.ibg{
+    background-position: center;
+    background-repeat: no-repeat;
+    &--contain{
+        background-size: contain;
+    }
+    &--cover{
+        background-size: cover;
+    }
+}
