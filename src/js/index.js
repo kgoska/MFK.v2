@@ -75,7 +75,10 @@ $(window).resize(function(){
 }); 
 $(document).ready(function (){
 	current_menu_id = $('#info').data('current-id');
+	main_menu_id = $('#info').data('main-menu-current-id');
 	$('#' + current_menu_id).addClass('current__page');
+	$('#' + main_menu_id + '>a').addClass('current');
+
 	$(".credit-slider").slick({
 		arrows:false,
 		dots:true,
