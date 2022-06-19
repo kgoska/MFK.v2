@@ -3,10 +3,13 @@
 // specialchecks.html
 // distance.htmlfor
 var $ = require( "jquery" );
+
 require ('./libs/slick.min.js');
 require ('./libs/mobile-menu.js');
 require ('./libs/dropdown.js');
 require ('./libs/deposite.js');
+
+
 
 function ibg(){
 	$.each($('.ibg'), function(index, val) {
@@ -72,8 +75,18 @@ $(document).ready(function(){
 $(window).resize(function(){
 	RatioW();
 	RatioH();
-}); 
+});
+
+setSubmenuHeight = () => {
+	$('.mobile-menu__submenu').each((index, item) => {
+		let items = $(item).find('.submenu__item')
+		let submenuHeight = items.length * items.first().height();
+		$(item).parent('.mobile-menu__item.selected').find('.submenu__body').css('height', submenuHeight+'px');
+		console.log(submenuHeight);
+	});
+} 
 $(document).ready(function (){
+	//setSubmenuHeight();
 	current_menu_id = $('#info').data('current-id');
 	main_menu_id = $('#info').data('main-menu-current-id');
 	$('#' + current_menu_id).addClass('current__page');
@@ -139,6 +152,18 @@ $(document).ready(function (){
 $(document).on("click",".dropbtn",function(){
 	$(this).parent(".dropdown").find(".dropdown-content").toggleClass("show");
 });
+
+$('.mobile-menu__item-wrap').click((e) => {
+	$('.mobile-menu__item-wrap').not(e.currentTarget).removeClass('selected');
+	$(e.currentTarget).toggleClass('selected');
+	$('.mobile-menu__item-wrap').not('.selected').each((index, item) => {
+		$(item).parent().find('.submenu__body').height(0);
+	});
+	let items = $(e.currentTarget).parent().find('.submenu__item');
+	let submenuHeight = items.length * items.first().height()+'px';
+	$('.mobile-menu__item-wrap.selected').parent().find('.submenu__body').height(submenuHeight);
+});
+
 $("#tarifs").click(function (e) {
 	e.preventDefault();
 	$("#tarifs").addClass("current-link");
