@@ -136,6 +136,9 @@ $(document).ready(function (){
 	RatioW();
 	RatioH();
 });
+$(document).on("click",".dropbtn",function(){
+	$(this).parent(".dropdown").find(".dropdown-content").toggleClass("show");
+});
 $("#tarifs").click(function (e) {
 	e.preventDefault();
 	$("#tarifs").addClass("current-link");
