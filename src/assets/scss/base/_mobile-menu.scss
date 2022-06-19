@@ -152,9 +152,9 @@
 
 
 .mobile-menu {
-    &__container {}
-    &__item {
-    }
+    // &__container {}
+    // &__item {
+    // }
     &__item-wrap {
         display: flex;
         justify-content: space-between;
@@ -193,9 +193,9 @@
             }
         }        
     }
-    &__item-text {
+    // &__item-text {
 
-    }
+    // }
     &__item-icon {
         content: '';
         flex: 0 0 10px;
@@ -222,7 +222,7 @@
         }
 
     }
-    &__submenu {}
+    // &__submenu {}
 }
 .submenu {
     margin: 0 5%;

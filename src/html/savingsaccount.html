@@ -1,0 +1,152 @@
+<%= require('html-loader!./inc/header.html') %>
+    <%= require('html-loader!./inc/client-menu.html') %>
+        <div id="info" data-current-id="contributions" data-main-menu-current-id="private-client-head"></div>
+
+        <!-- Main content-->
+
+        <section class="container">
+            <div class="second__header-operations">
+                <div class="second__text-credits__list">
+                    <a class="second__text-credits" href="#">Главная /</a>
+                    <a class="second__text-credits" href="contributions.html">Частным клиентам /</a>
+                    <a class="second__text-credits" href="contributions.html">Вклады и счета /</a>
+                    <a class="second__text-credits current-second__text-credits"
+                        href="savingsaccount.html">Накопительный счет</a>
+                </div>
+            </div>
+            <div class="operations">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <p class="dropbtn-text">Накопительный счет</p>
+                        <img class="dropdown__picture" src="assets/img/icons/ARROW.png" alt="arrow"
+                            class="operations__picture" width="20px" height="20px">
+                    </button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <ul class="operations__list__mobile">
+                            <li class="operations__list-item__mobile">
+                                <a href="contributions.html" class="operations__link__mobile">Вклады</a>
+                            </li>
+                            <li class="operations__list-item__mobile">
+                                <a href="settlement-service.html" class="operations__link__mobile">Расчетное
+                                    обслуживание</a>
+                            </li>
+                            <li class="operations__list-item__mobile">
+                                <a href="savingsaccount.html" class="operations__link__mobile">Накопительный счет</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="operations__item">
+                    <ul class="operations__list">
+                        <li class="operations__list-item ">
+                            <a href="contributions.html" class="operations__link ">Вклады</a>
+
+                        </li>
+                        <li class="operations__list-item">
+                            <a href="settlement-service.html" class="operations__link ">Расчетное обслуживание</a>
+                        </li>
+                        <li class="operations__list-item current-operations__list-item">
+                            <a href="#" class="operations__link current-operations__link">Накопительный счет</a>
+                            <img src="assets/img/images/arrow.png" alt="arrow" class="operations__picture" width="20px"
+                                height="20px">
+                        </li>
+                    </ul>
+                </div>
+                <div class="operations__item">
+                    <h2 class="second__title-settlement-service contributions_title">Накопительный счет</h2>
+                    <div class="garanty__card savingsaccount__card">
+                        <div class="garanty__title-wrapper">
+                            <div class="garanty__title">
+                                <span>Проценты по счету:</span>
+                            </div>
+                        </div>
+                        <div class="garanty__advantages">
+                            <div class="garanty__advantage">
+                                <span>проценты начисляются исходя из фактического остатка денежных средств на Счете на
+                                    начало каждого дня в течение расчетного
+                                    периода и выплачиваются ежемесячно в последний календарный день расчетного периода
+                                    путем зачисления суммы причитающихся
+                                    процентов на Счет;</span>
+                            </div>
+                            <div class="garanty__advantage">
+                                <span>в случае если последний календарный день приходится на выходной или праздничный
+                                    день, выплата процентов за расчетный
+                                    период осуществляется в ближайший следующий за ним рабочий день;</span>
+                            </div>
+                            <div class="garanty__advantage">
+                                <span>в случае закрытия счета до даты выплаты процентов, ранее начисленные проценты за
+                                    этот расчетный период не выплачиваются;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="operations__documentation">
+                        <div class="operations__documentation-nav">
+                            <div class="operations__documentation-block">
+                                <div>
+                                    <h3 class="operations__documentation-title">
+                                        Документы
+                                    </h3>
+                                </div>
+                                <div class="operations__documentation-list">
+                                    <div class="operations__documentation-kind active">
+                                        <div class="operations__documentation-file">
+                                            <img src="assets/img/images/pdf.png" alt="pdf" width="24px" height="30px">
+                                            <div class="operations__documentation-content">
+                                                <H5 class="operations__documentation-description">
+                                                    Условия открытия и обслуживания счета «МФК Сберегательный»
+                                                    физического лица
+                                                </H5>
+                                                <p class="operations__documentation-caracter">
+                                                    PDF, 279 КБ / 04 июня 2018
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="operations__documentation-file">
+                                            <img src="assets/img/images/pdf.png" alt="pdf" width="24px" height="30px">
+                                            <div class="operations__documentation-content">
+                                                <H5 class="operations__documentation-description">
+                                                    Заявление на открытие счета МФК Сберегательный
+                                                </H5>
+                                                <p class="operations__documentation-caracter">
+                                                    PDF, 279 КБ / 04 июня 2018
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="operations__documentation-file">
+                                            <img src="assets/img/images/pdf.png" alt="pdf" width="24px" height="30px">
+                                            <div class="operations__documentation-content">
+                                                <H5 class="operations__documentation-description">
+                                                    Заявление на закрытие счета «МФК Сберегательный»
+                                                </H5>
+                                                <p class="operations__documentation-caracter">
+                                                    PDF, 279 КБ / 04 июня 2018
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="operations__documentation-file hide" data-show="no">
+                                            <img src="assets/img/images/pdf.png" alt="pdf" width="24px" height="30px">
+                                            <div class="operations__documentation-content">
+                                                <H5 class="operations__documentation-description">
+                                                    Заявление на закрытие и открытие счета «МФК Сберегательный»
+                                                </H5>
+                                                <p class="operations__documentation-caracter">
+                                                    PDF, 279 КБ / 04 июня 2018
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="documentation__more more" type="button" id="showmore">
+                            Смотреть все
+                            <svg class="more-picture">
+                                <use href="assets/img/svg/sprite/symbol-defs.svg#icon-more" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%= require('html-loader!./inc/footer.html') %>
