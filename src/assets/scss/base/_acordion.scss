@@ -2,7 +2,6 @@
     margin: 20px 0;
 }
 .acor-container .acor-body {
-//    display: grid;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -23,12 +22,12 @@
 
 }
 .acor-container .acor-body a {
-    flex: 1 0 auto;
+    flex: 1 0 40px;
     display: flex;
     justify-content: start;
     align-items: center;
     padding-left: 5%;
-    border-top: 1px solid #fff6bf;
+    border-top: 1px solid #fff;
     border-bottom: 1px solid #999;
     color:#00208F;
     :visited,:active {
@@ -76,7 +75,7 @@
     transition: transform .35s;
 }
 .acor-container input:checked + label + .acor-body {
-    height: 175px;
+    height: auto;
 //    margin-top: -5px;
     color: #000;
 //    padding: 20px 0 10px;

@@ -72,8 +72,16 @@ $(document).ready(function(){
 $(window).resize(function(){
 	RatioW();
 	RatioH();
-}); 
+});
+
+SetSubmenuHeight = () => {
+	$('.acor-body').each((index, item) => {
+		let menuHeight = $(item).children('a').length*$(item).children('a').first().height();
+		$('.acor-container input:checked + label + '+$(item)).css('height', menuHeight);
+	});
+} 
 $(document).ready(function (){
+	SetSubmenuHeight();
 	current_menu_id = $('#info').data('current-id');
 	main_menu_id = $('#info').data('main-menu-current-id');
 	$('#' + current_menu_id).addClass('current__page');
