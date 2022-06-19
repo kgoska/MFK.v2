@@ -77,16 +77,8 @@ $(window).resize(function(){
 	RatioH();
 });
 
-setSubmenuHeight = () => {
-	$('.mobile-menu__submenu').each((index, item) => {
-		let items = $(item).find('.submenu__item')
-		let submenuHeight = items.length * items.first().height();
-		$(item).parent('.mobile-menu__item.selected').find('.submenu__body').css('height', submenuHeight+'px');
-		console.log(submenuHeight);
-	});
-} 
+ 
 $(document).ready(function (){
-	//setSubmenuHeight();
 	current_menu_id = $('#info').data('current-id');
 	main_menu_id = $('#info').data('main-menu-current-id');
 	$('#' + current_menu_id).addClass('current__page');
