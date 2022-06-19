@@ -15,6 +15,9 @@
         margin-bottom: 62px;
     }
 }
+.operations__picture{
+    margin-left: 15px;
+}
 .operations__item.hide{
     @media screen and (max-width: 991px) {
         display: none;

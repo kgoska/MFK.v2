@@ -90,8 +90,7 @@
 
 		// .filter__option-form
 
-		&__option-form {
-		}
+		
 }
 .checkbox {
     width:20px;
@@ -102,8 +101,7 @@
 
 		// .fiter__option-item
 
-		&__option-item {
-		}
+
         &__option-form{
             display: flex;
             flex-direction: column;
@@ -476,12 +474,13 @@ label {
   display: block;
 }
 .sliderBar {
-  position: relative;
-  margin: $spacing;
+    align-self: center;
+    position: relative;
+    margin: $spacing;
 }
 [type=range] {
   -webkit-appearance: none;
-  width: calc(100% - 50px);
+  width: 100%;
   vertical-align: middle;
   border: none;
   outline: none;
