@@ -4778,6 +4778,7 @@ label {
   margin-bottom: 25px;
 }
 
+<<<<<<< Updated upstream
 .operations__kind-title.settlement-service__title {
   margin-left: 20px;
 }
@@ -4802,6 +4803,8 @@ label {
   color: #5B5C5F;
 }
 
+=======
+>>>>>>> Stashed changes
 .def-slider {
   position: relative;
   display: -webkit-box;
