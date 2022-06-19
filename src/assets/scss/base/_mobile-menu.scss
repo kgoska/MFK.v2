@@ -149,3 +149,29 @@
 
 
 }
+
+
+.mobile {
+    // .mobile__menu
+    &__menu {}
+}
+.mobile-menu {
+    // .mobile-menu__container
+    &__container {}
+    // .mobile-menu__item
+    &__item {}
+    // .mobile-menu__item-text
+    &__item-text {}
+    // .mobile-menu__item-icon
+    &__item-icon {}
+    // .mobile-menu__submenu
+    &__submenu {}
+}
+.submenu {
+    // .submenu__body
+    &__body {}
+    // .submenu__item
+    &__item {}
+    // .submenu__item-link
+    &__item-link {}
+}

@@ -77,7 +77,6 @@ $(window).resize(function(){
 SetSubmenuHeight = () => {
 	$('.acor-body').each((index, item) => {
 		let menuHeight = $(item).children('a').length*$(item).children('a').first().height();
-		$('.acor-container input:checked + label + '+$(item)).css('height', menuHeight);
 	});
 } 
 $(document).ready(function (){
