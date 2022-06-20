@@ -71,7 +71,30 @@ $(document).ready(function(){
 });
 
 //READMORE END
+//Filter Start
+$(document).on('click', '.filter-button', function(event) {
+	let filterData = JSON.parse($(this).data("filter"));
+	let filteredObjects = $("#"+$(this).data("filter-container-id")).find(".filtered");
 
+	for (var i = 0; i < filteredObjects.length; i++) {
+		let filteredObject = $(filteredObjects[i]);
+		let filteredType = filteredObject.data("filtered-type")
+		if(filterData[filteredType]){
+			filteredObject.removeClass("hidden"); // unhiding if true in filterData
+		}
+		else{
+			filteredObject.addClass("hidden"); // hiding if false in filterData
+		}
+		
+	}
+	//disabling all buttons with this id
+	$(".filter-button[data-filter-container-id="+$(this).data("filter-container-id")+"]").removeClass("active");
+
+	//enabling this button
+	$(this).addClass("active");
+
+});
+//Filter end
 $(window).resize(function(){
 	RatioW();
 	RatioH();
