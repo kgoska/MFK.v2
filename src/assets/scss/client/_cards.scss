@@ -1,5 +1,7 @@
 .card-list {
 	margin-bottom: 70px;
+	display: flex;
+	flex-direction: column;
 	&__title {
 		font-family: 'Helvetica';
 		font-style: normal;
@@ -49,7 +51,11 @@
 		border-image: linear-gradient(222.02deg, #002E82 -11.58%, #00A3E0 125.94%) 1;
 
 		transition: all 0.5s;
-		&:hover{
+		&:active {
+			background: linear-gradient(222.02deg, #002E82 -11.58%, #00A3E0 125.94%);
+			color: #fff;
+		}
+		&.active{
 			background: linear-gradient(222.02deg, #002E82 -11.58%, #00A3E0 125.94%);
 			color: #fff;
 		}
@@ -64,8 +70,13 @@
 		border: 1px solid #D1D1D1;
 		box-shadow: 0px 4px 4px rgba(0, 32, 91, 0.15);
 		padding: 40px 20px;
+		margin-bottom: 50px;
 	}
 	&__card {
+		&.hidden, 
+		&.filtered-hidden{
+			display: none;
+		}
 		&__content-wrapper{
 			gap:10px;
 			display: grid;
@@ -216,6 +227,9 @@
 		color: #4E4E4E;
 	}
 	&__advantage__icon {
+	}
+	&__read-more{
+
 	}
 	
 	
