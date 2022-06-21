@@ -351,44 +351,7 @@
 			display: none;
 		}
 	}
-	&__read-more-wrapper {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
 	&__read-more {
-		font-family: 'Helvetica';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 15px;
-		line-height: 17px;
-
-		cursor: pointer;
-		color: #333333;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		&>img{
-			margin-left: 10px;
-			width: 32px;
-		}
-		&__text-less{
-			display: none;
-		}
-		&__text-more{
-			display: block;
-		}
-		&.toggled {
-			&>img{
-				transform: rotate(180deg);
-			}
-			.document-list__read-more__text-less{
-				display: block;
-			}
-			.document-list__read-more__text-more{
-				display: none;
-			}
-		}
 	}
 }
 .credite-kinds__documents {

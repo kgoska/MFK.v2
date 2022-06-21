@@ -80,10 +80,10 @@ $(document).on('click', '.filter-button', function(event) {
 		let filteredObject = $(filteredObjects[i]);
 		let filteredType = filteredObject.data("filtered-type")
 		if(filterData[filteredType]){
-			filteredObject.removeClass("hidden"); // unhiding if true in filterData
+			filteredObject.removeClass("filtered-hidden"); // unhiding if true in filterData
 		}
 		else{
-			filteredObject.addClass("hidden"); // hiding if false in filterData
+			filteredObject.addClass("filtered-hidden"); // hiding if false in filterData
 		}
 		
 	}
