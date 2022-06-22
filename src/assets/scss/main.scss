@@ -1,6 +1,7 @@
 @import '../../../node_modules/modern-normalize/modern-normalize.css';
 @import './base/fonts';
-//@import './base/normalize';
+@import './utils/mixins';
+@import './utils/vars';
 @import './base/container';
 @import './base/header';
 @import './base/mobile-menu';
@@ -21,9 +22,8 @@
 @import './client/contributions';
 @import './client/savingsaccount';
 @import './client/cards';
+@import './client/coins';
 @import './corporative/def-slider';
-@import './utils/mixins';
-@import './utils/vars';
 
 @import '../css/slick.css';
 
@@ -31,7 +31,11 @@
 
 body {
     margin: 0px;
+    font-family: $mainFont;
+    color: #003772;
+    background-color: #F7FAFF;
 }
+
 button:hover,
 button:focus {
     cursor: pointer;
@@ -67,6 +71,13 @@ h6,
 p {
     margin-top: 0;
     margin-bottom: 0;
+}
+h1 { //default style for main page title
+    font-style: normal;
+    font-weight: 600;
+    font-size: rem(24);
+    line-height: rem(28);
+    text-transform: uppercase;
 }
 .ibg{
     background-position: center;
