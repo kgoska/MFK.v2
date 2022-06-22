@@ -1,0 +1,20 @@
+.breadcrumbs {
+	display: flex;justify-content: start;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 65px 0 55px;
+	&__step {
+		color: #001843;
+		font-style: normal;
+		font-weight: 400;
+		font-size: rem(16);
+		line-height: 18px;
+		&:last-child {
+			color: #747474;
+		}
+		&:not(:last-child):after { 
+			content: '/';
+			margin: 0 15px;
+		}
+	}
+}
