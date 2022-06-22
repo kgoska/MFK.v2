@@ -13,7 +13,7 @@
 		color: #003772;
 	}
 	&__filters {
-		margin-left: 54px;
+		// margin-left: 54px;
 		margin-bottom: 70px;
 	}
 	&__filters-title {
@@ -29,6 +29,7 @@
 	&__filter-buttons {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
 		gap:35px;
 		@media screen and (max-width: 576px) {
 			gap:20px;
@@ -36,7 +37,7 @@
 	}
 	&__filter-button {
 		padding: 10px 20px;
-
+		min-width: 170px;
 		font-family: 'Helvetica';
 		font-style: normal;
 		font-weight: 400;
@@ -179,6 +180,9 @@
 			}
 		}
 		&__button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			@media screen and (max-width: 769px) {
 				width: 100%;
 			}

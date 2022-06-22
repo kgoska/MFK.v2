@@ -1,0 +1,30 @@
+.card-banner {
+	&__outer-wrapper {
+		display: flex;
+
+	}
+	&__content-wrapper {
+		flex: 0 0 50%;
+		padding: 25px 50px;
+
+		background: #001843;
+
+	}
+	&__back-button {
+	}
+	&__back-arrow {
+	}
+	&__title {
+	}
+	&__subtitle {
+	}
+	&__consult-button {
+	}
+	&__image-wrapper {
+		flex: 0 0 50%;
+		// background-position: 50% 0;
+	}
+}
+*{
+	color: inherit;
+}
