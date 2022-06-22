@@ -188,6 +188,9 @@
     line-height: 18px;
     color: #4E4E4E;
 }
+.description-text:not(:first-child){
+    margin-left: 15px;
+}
 .description-item:not(:last-child){
     margin-bottom: 20px;
 }
