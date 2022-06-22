@@ -1,0 +1,223 @@
+.page {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	@media (max-width: 992px) {
+		flex-direction: column;
+	}
+	.page__sidebar {
+		flex: 0 0 31%;
+		margin-right: 60px;
+		@media screen and (max-width: 1024px) {
+			flex: 0 0 45%;
+			margin-right: 20px;
+		}
+		@media (max-width: 992px) {
+			margin-bottom: 51px;
+		}
+	}
+	.page__content {
+		flex: 1 0 0;
+	}
+}
+
+.sidebar {
+	&__items {
+
+	}
+	&__item {
+		line-height: rem(48);
+		text-transform: uppercase;	
+		font-style: normal;
+		font-weight: 400;
+		font-size: rem(18);
+		color: #727272;
+		padding-left: 19%;			
+		@media (max-width: 992px) {
+			&:not(.sidebar__item--selected){
+				display: none;
+			}
+		}
+		&--selected {
+			display: flex;
+			justify-content: start;
+			align-items: stretch;
+			background: #FFFFFF;
+			box-shadow: 0px 4px 4px rgba(86, 31, 0, 0.1);
+			border-radius: 2px;
+			.sidebar__item-text {
+				flex: 1 0 auto;
+				font-weight: bold;
+				background: linear-gradient(274.25deg, #00205B -9.03%, #00A3E0 138.82%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				text-fill-color: transparent;
+				a, a:active, a:visited {
+					color: #727272;
+				}
+			}
+			.sidebar__item-icon {
+				position: relative;
+				flex: 0 0 28px;
+				color: #2F4670;
+				margin-right: 12px;
+				@media (max-width: 992px) {
+					transform: rotate(90deg);
+				}
+			}
+			.sidebar__item-icon::before { 
+				content: '';
+				position: absolute;
+				top: 50%;
+				margin-top: -1.5px;
+				width: 95%;
+				height: 3px;
+				background-color: #2F4670;
+			}
+			.sidebar__item-icon::after { 
+				content: '';
+				position: absolute;
+				margin-top: -1.5px;
+				width: 19px;
+				height: 19px;
+				border-bottom: 3px solid #2F4670;
+				border-right: 3px solid #2F4670;
+				bottom: 50%;
+				transform-origin: bottom right;
+				transform: rotate(-45deg);
+				right: 0;
+				margin-top: -1.5px;
+			}
+		}
+	}
+	&__item-text {
+	}
+	&__item-icon {
+		display: block;
+	}
+}
+.basic-page {
+	&__title {
+		text-align: center;
+		margin-bottom: 39px;
+	}
+	&__body {}
+}
+
+.coins {
+	&__search {}
+}
+.search {
+	margin-bottom: 86px;
+	&__wrap {}
+	&__title {
+			h2{
+			font-style: normal;
+			font-weight: 400;
+			font-size: rem(20);
+			line-height: rem(25);
+		}
+		margin-bottom: 10px;
+	}
+	&__line {
+		display: flex;
+		justify-content: center;
+		align-items: stretch;
+		margin-bottom: 18px;
+		input{
+			flex: 1 0 auto;
+			background: linear-gradient(222.02deg, rgba(0, 46, 130, 0.1) -11.58%, rgba(0, 163, 224, 0.1) 125.94%);
+			border-radius: 5px;
+			border: none;
+			&::placeholder {
+				padding-left: 5%;
+				color: #a7a7a7;
+			}
+		}
+	}
+	&__btn {
+		@media screen and (max-width: 768px) {
+			width: auto;
+			padding: 0 5%;
+		}
+	}
+	&__filters {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		flex-wrap: wrap;
+		@media screen and (max-width:768px) {
+			justify-content: center;
+		}
+	}
+}
+.filters {
+	&>:not(last-child){
+		margin-right: 40px;
+		color: #676767;
+	}
+	&>* {
+		@media screen and (max-width:768px) {
+			margin: 5px 0;
+		}
+	}
+	&__title {}
+	&__price {}
+	&__year {}
+	&__filter-all {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+	}
+}
+.filter {
+	&__sort {
+		position: relative;
+		margin-right: 50px !important;
+		&:after {
+			content: '';
+			position: absolute;
+			width: 9.5px;
+			height: 9.5px;
+			border-bottom: 1px solid;
+			border-right: 1px solid;
+			transform-origin: bottom right;
+			margin-left: 2px;
+			transition: all 0.2s;
+		}
+		&--up{
+			&:after{
+				transform: rotate(-135deg);
+				top: 0%;
+				margin-top: -5px;
+				transition: all 0.2s;
+			}
+		}
+		&--down{
+			&:after{
+				transform: rotate(45deg);
+				top: 50%;
+				margin-top: -6.5px;
+				transition: all 0.2s;
+			}
+		}
+	}
+}
+.form-control {
+	display: flex;
+	justify-content: start;
+	&:not(:last-child){
+		margin-right: 40px;
+	}
+	input[type="radio"] {
+		appearance: none;
+		&:checked+label{
+			background: linear-gradient(224.4deg, #7B1931 -23.64%, #E05226 113.52%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+			}
+	}
+}

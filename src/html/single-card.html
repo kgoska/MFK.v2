@@ -1,0 +1,47 @@
+<%= require('html-loader!./inc/header.html') %>
+	<%= require('html-loader!./inc/client-menu.html') %>
+		<div id="info" data-current-id="cards" data-main-menu-current-id="private-client-head"></div>
+
+		<!-- Main content-->
+
+		<section>
+			<div class="container">
+				<div class="breadcrumbs">
+					<div class="breadcrumbs__step">Главная</div>
+					<div class="breadcrumbs__step">Частным клиентам</div>
+					<div class="breadcrumbs__step"> Монеты  Обмен валюты</div>
+					<div class="breadcrumbs__step">Монеты</div>        
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="card-banner">
+				<div class="card-banner__outer-wrapper">
+					<div class="card-banner__content-wrapper">
+						<div class="card-banner__back-button text--white text--400 text--S text--uppercase">
+							<div class="card-banner__back-arrow"></div>
+							<span>все карты</span>
+						</div>
+						<div class="card-banner__title">
+							<span>КАРТА «Мир пенсионная»</span>
+						</div>
+						<div class="card-banner__subtitle">
+							<span>Классическая</span>
+						</div>
+						<div class="card-banner__consult-button">
+							<button class="">Получить консультацию</button>
+						</div>
+					</div>
+					<div class="card-banner__image-wrapper ibg ibg--cover">
+						<img src="../assets/img/images/card-banner-preview.jpg" alt="">
+					</div>
+				</div>
+				
+			</div>
+		</section>
+
+	<%= require('html-loader!./inc/footer.html') %>
+
+</body>
+
+</html>

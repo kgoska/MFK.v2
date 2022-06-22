@@ -1,0 +1,71 @@
+.text{
+	&--white{
+		color: #fff;
+	}
+	&--blue{
+		color: #003772;
+	}
+	&--cyan{
+		color: #00A3E0;
+	}
+	&--dark-gray{
+		color: #4B4B4B;
+	}
+	&--gray{
+		color: #6A6A6A;
+	}
+	&--light-gray{
+		color: #858585;
+	}
+	&--black{
+		color: #000;
+	}
+	&--blue-cyan{
+		background: linear-gradient(274.25deg, #00205B -9.03%, #00A3E0 138.82%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		text-fill-color: transparent;	
+	}
+	&--400{
+		font-weight: 400;
+	}
+	&--500{
+		font-weight: 500;
+	}
+	&--700{
+		font-weight: 700;
+	}
+	
+	&--XL{
+		@include fSize(992, 440, 24, 20);
+		line-height: 1.1em;
+		&--static{
+			font-size: 24px;
+		}
+	}
+	&--L{
+		@include fSize(992, 440, 24, 18);
+		line-height: 1.1em;
+		&--static{
+			font-size: 20px;
+		}
+	}
+	&--M{
+		@include fSize(992, 440, 18, 16);
+		line-height: 1.1em;
+		&--static{
+			font-size: 18px;
+		}
+	}
+	&--S{
+		@include fSize(992, 440, 16, 14);
+		line-height: 1.1em;
+		&--static{
+			font-size: 16px;
+		}
+	}
+	&--uppercase{
+		text-transform: uppercase;
+	}
+}
