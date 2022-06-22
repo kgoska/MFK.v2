@@ -1,22 +1,3 @@
-.breadcrumbs {
-	display: flex;justify-content: start;
-	align-items: center;
-	margin: 65px 0 55px;
-	&__step {
-		color: #001843;
-		font-style: normal;
-		font-weight: 400;
-		font-size: rem(16);
-		line-height: 18px;
-		&:last-child {
-			color: #747474;
-		}
-		&:not(:last-child):after { 
-			content: '/';
-			margin: 0 15px;
-		}
-	}
-}
 .page {
 	display: flex;
 	justify-content: center;
@@ -150,23 +131,36 @@
 			border-radius: 5px;
 			border: none;
 			&::placeholder {
-				padding-left: 15px;
+				padding-left: 5%;
 				color: #a7a7a7;
 			}
 		}
 	}
-	&__btn {}
+	&__btn {
+		@media screen and (max-width: 768px) {
+			width: auto;
+			padding: 0 5%;
+		}
+	}
 	&__filters {
 		display: flex;
 		justify-content: start;
 		align-items: center;
 		flex-wrap: wrap;
+		@media screen and (max-width:768px) {
+			justify-content: center;
+		}
 	}
 }
 .filters {
 	&>:not(last-child){
 		margin-right: 40px;
 		color: #676767;
+	}
+	&>* {
+		@media screen and (max-width:768px) {
+			margin: 5px 0;
+		}
 	}
 	&__title {}
 	&__price {}
