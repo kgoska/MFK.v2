@@ -41,10 +41,9 @@
 }
 
 .sidebar {
-		@media (max-width: 992px) {
-			
-		}
-	&__items {}
+	&__items {
+
+	}
 	&__item {
 		line-height: rem(48);
 		text-transform: uppercase;	
@@ -52,7 +51,12 @@
 		font-weight: 400;
 		font-size: rem(18);
 		color: #727272;
-		padding-left: 19%;
+		padding-left: 19%;			
+		@media (max-width: 992px) {
+			&:not(.sidebar__item--selected){
+				display: none;
+			}
+		}
 		&--selected {
 			display: flex;
 			justify-content: start;
@@ -77,6 +81,9 @@
 				flex: 0 0 28px;
 				color: #2F4670;
 				margin-right: 12px;
+				@media (max-width: 992px) {
+					transform: rotate(90deg);
+				}
 			}
 			.sidebar__item-icon::before { 
 				content: '';
