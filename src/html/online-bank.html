@@ -1,0 +1,62 @@
+		<%= require('html-loader!./inc/header.html') %>
+		<%= require('html-loader!./inc/client-menu.html') %>
+		<div id="info" data-current-id="online-bank" data-main-menu-current-id="private-client-head"></div>
+<!-- Main content-->
+		<section>
+			<div class="container">
+				<div class="breadcrumbs">
+					<div class="breadcrumbs__step">Главная</div>
+					<div class="breadcrumbs__step">Частным клиентам</div>
+					<div class="breadcrumbs__step"> Монеты и обмен валюты</div>
+					<div class="breadcrumbs__step">Монеты</div>        
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container">
+				<div class="page page--with-sidebar">
+					<div class="page__sidebar sidebar">
+						<div class="sidebar__overlay"></div>
+						<div class="sidebar__items">
+							<div class="sidebar__item">
+								<div class="sidebar__item-text">
+									<a href="#">Обмен валюты</a>
+								</div>
+								<div class="sidebar__item-icon"></div>
+							</div>
+							<div class="sidebar__item sidebar__item--selected">
+								<div class="sidebar__item-text">
+									<a href="coins.html">Монеты</a>
+								</div>
+								<div class="sidebar__item-icon"></div>
+							</div>
+							<div class="sidebar__item">
+								<div class="sidebar__item-text">
+									<a href="#">Обмен валюты</a>
+								</div>
+								<div class="sidebar__item-icon"></div>
+							</div>
+						</div>
+					</div>
+					<div class="page__content basic-page">
+						<div class="basic-page__title">
+							<h1>Монеты</h1>
+						</div>
+						<div class="basic-page__body">
+							<div class="arrow arrow--blue arrow--28">
+								<!-- <div class="arrow__body"></div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+
+
+
+		<%= require('html-loader!./inc/footer.html') %>
+	</body>
+</html>
