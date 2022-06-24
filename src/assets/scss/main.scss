@@ -31,6 +31,7 @@
 @import './client/ubs';
 @import './client/coins';
 @import './client/online-bank';
+@import './client/exchanges';
 
 
 @import '../css/slick.css';
@@ -62,10 +63,14 @@ ul {
     padding: 0;
 }
 
-a, a:hover, a:focus, a:active { 
-      text-decoration: none; 
-      color: inherit; 
- }
+a {
+  color: inherit;
+  text-decoration: inherit; /* no underline */
+}
+// a, a:hover, a:focus, a:active { 
+//       text-decoration: none; 
+//       color: inherit; 
+//  }
 
 // img {
 //     display: block;

@@ -209,3 +209,93 @@
 		padding: 0 40px;
 	}
 }
+.arrow{
+	height: var(--arrow-height);
+	min-height:var(--arrow-height);
+	width: calc(var(--arrow-thickness)*2);
+	min-width:calc(var(--arrow-thickness)*2);
+	position: relative;
+	margin: 0 calc(var(--arrow-width)/2 - var(--arrow-thickness)*2);
+	padding-bottom: calc(var(--arrow-thickness) * 2);
+	background-color: var(--arrow-color);
+	background-clip: content-box;
+	transform: rotate(var(--arrow-rotation,0));
+	&--bottom-left{
+		--arrow-rotation:45deg;
+	}
+	&--left{
+		--arrow-rotation:90deg;
+	}
+	&--up-left{
+		--arrow-rotation:135deg;
+	}
+	&--up{
+		--arrow-rotation:180deg;
+	}
+	&--up-right{
+		--arrow-rotation:225deg;
+	}
+	&--right{
+		--arrow-rotation:270deg;
+	}
+	&--bottom-right{
+		--arrow-rotation:315deg;
+	}
+	
+	&--red{
+		--arrow-color: #CD0000;
+	}
+	&--green{
+		--arrow-color: #03A300;
+	}
+	&--blue{
+		--arrow-color: #2f4670;
+	}
+	&--white{
+		--arrow-color: #fff;
+	}
+	&--16{
+		--arrow-thickness: 1px;
+		--arrow-height: 16px;
+		--arrow-width: 16px;
+	}
+	&--28{
+		--arrow-thickness: 1.5px;
+		--arrow-height: 28px;
+		--arrow-width: 32px;
+	}
+	&--32{
+		--arrow-thickness: 2px;
+		--arrow-height: 32px;
+		--arrow-width: 32px;
+	}
+	&--no-body{
+		background-color: transparent;
+	}
+	&:before{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		right: calc(var(--arrow-width)/-2 + var(--arrow-thickness));
+		width: calc(var(--arrow-width)/2 + var(--arrow-thickness));
+		transform-origin: var(--arrow-thickness) 50%;
+		transform: rotate(-45deg);
+
+		background: var(--arrow-color);
+		border: var(--arrow-thickness) solid var(--arrow-color);
+		border-radius: var(--arrow-thickness);
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		left: calc(var(--arrow-width)/-2 + var(--arrow-thickness));
+		bottom: 0;
+		width: calc(var(--arrow-width)/2 + var(--arrow-thickness));
+		transform-origin: calc(100% - var(--arrow-thickness)) 50%;
+		transform: rotate(45deg);
+
+		background: var(--arrow-color);
+		border: var(--arrow-thickness) solid var(--arrow-color);
+		border-radius: var(--arrow-thickness);
+	}
+}
