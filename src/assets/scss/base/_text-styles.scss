@@ -51,6 +51,13 @@
 			font-size: 20px;
 		}
 	}
+	&--LM{
+		@include fSize(992, 440, 24, 16);
+		line-height: 1.1em;
+		&--static{
+			font-size: 20px;
+		}
+	}
 	&--M{
 		@include fSize(992, 440, 18, 16);
 		line-height: 1.1em;

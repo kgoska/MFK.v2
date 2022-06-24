@@ -293,3 +293,13 @@ $('body').on('click','#showmore.less',function(e){
 		});
 	$('#showmore.less').removeClass('less').addClass('more').html('Смотреть все<svg class="more-picture"><use href="./img/svg/sprite/symbol-defs.svg#icon-more" /></svg>');
 });
+$(document).on('click', '.sidebar:not(.open)', (e)=>{
+	e.preventDefault();
+	$(e.currentTarget).toggleClass('open');
+});
+$(document).on('click', '.sidebar.open .sidebar__overlay', (e)=>{
+	$(e.currentTarget).parent('.sidebar').removeClass('open');
+});
+$(document).on('click', '.sidebar.open .sidebar__item--selected', (e)=>{
+	$(e.currentTarget).parents('.sidebar').removeClass('open');
+});
