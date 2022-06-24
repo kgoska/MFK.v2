@@ -36,7 +36,13 @@
 	&--700{
 		font-weight: 700;
 	}
-	
+	&--XXL{
+		@include fSize(992, 440, 24, 20);
+		line-height: 1.1em;
+		&--static{
+			font-size: 28px;
+		}
+	}
 	&--XL{
 		@include fSize(992, 440, 24, 20);
 		line-height: 1.1em;
