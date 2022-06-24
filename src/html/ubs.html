@@ -1,58 +1,22 @@
 <%= require('html-loader!./inc/header.html') %>
     <%= require('html-loader!./inc/client-menu.html') %>
-        <div id="info" data-current-id="contributions" data-main-menu-current-id="private-client-head"></div>
+        <div id="info" data-current-id="coins" data-main-menu-current-id="private-client-head"></div>
 
         <!-- Main content-->
-
-        <section class="container">
-            <div class="second__header-operations">
-                <div class="second__text-credits__list">
-                    <a class="second__text-credits" href="#">Главная /</a>
-                    <a class="second__text-credits" href="contributions.html">Частным клиентам /</a>
-                    <a class="second__text-credits" href="contributions.html">Обмен валюты /</a>
-                    <a class="second__text-credits current-second__text-credits" href="ubs.html">Единая биометрическая
-                        система</a>
+        <section>
+            <div class="container">
+                <div class="breadcrumbs">
+                    <div class="breadcrumbs__step">Главная</div>
+                    <div class="breadcrumbs__step">Частным клиентам</div>
+                    <div class="breadcrumbs__step">Oбмен валюты</div>
+                    <div class="breadcrumbs__step">Единая биометрическая
+                        система</div>
                 </div>
             </div>
-            <div class="operations">
-                <!-- <div class="dropdown">
-                    <button class="dropbtn">
-                        <p class="dropbtn-text">Накопительный счет</p>
-                        <img class="dropdown__picture" src="assets/img/icons/ARROW.png" alt="arrow"
-                            class="operations__picture" width="20px" height="20px">
-                    </button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <ul class="operations__list__mobile">
-                            <li class="operations__list-item__mobile">
-                                <a href="contributions.html" class="operations__link__mobile">Вклады</a>
-                            </li>
-                            <li class="operations__list-item__mobile">
-                                <a href="settlement-service.html" class="operations__link__mobile">Расчетное
-                                    обслуживание</a>
-                            </li>
-                            <li class="operations__list-item__mobile">
-                                <a href="savingsaccount.html" class="operations__link__mobile">Накопительный счет</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div> -->
-                <!-- <div class="operations__item">
-                    <ul class="operations__list">
-                        <li class="operations__list-item ">
-                            <a href="contributions.html" class="operations__link ">Вклады</a>
-
-                        </li>
-                        <li class="operations__list-item">
-                            <a href="settlement-service.html" class="operations__link ">Расчетное обслуживание</a>
-                        </li>
-                        <li class="operations__list-item current-operations__list-item">
-                            <a href="#" class="operations__link current-operations__link">Накопительный счет</a>
-                            <img src="assets/img/images/arrow.png" alt="arrow" class="operations__picture" width="20px"
-                                height="20px">
-                        </li>
-                    </ul>
-                </div> -->
-                <div class="operations__item">
+        </section>
+        <section>
+            <div class="container">
+                <div class="ubs-page">
                     <h2 class="second__title-settlement-service contributions_title usb__title">Единая биометрическая
                         система</h2>
                     <div class="ubs__item">
@@ -88,52 +52,113 @@
                         </p>
                     </div>
                     <div class="ubs__register">
-                        <h4 class="ubs_about-title">
+                        <h4 class="ubs__about-title register__about-title">
                             Как зарегистрироваться
                         </h4>
                         <ul class="ubs__register-list">
                             <li class="ubs__register-item">
-                                <h5 class="ubs__register-title">
-                                    Обратитесь в один из офисов банка, которые работают с биометрией.
-                                </h5>
-                                <p class="ubs__register-text">
-                                    Клиент должен предоставить паспорт, СНИЛС , а также согласие на обработку
-                                    персональных данных, необходимых для
-                                    регистрации в ЕСИА
-                                </p>
+                                <div class="wrap__register-number">
+                                    <p class="ubs__register-number">
+                                        1
+                                    </p>
+                                </div>
+                                <div class="wrapper__register-item">
+                                    <h5 class="ubs__register-title">
+                                        Обратитесь в один из офисов банка, которые работают с биометрией.
+                                    </h5>
+                                    <p class="ubs__register-text">
+                                        Клиент должен предоставить паспорт, СНИЛС , а также согласие на обработку
+                                        персональных данных, необходимых для
+                                        регистрации в ЕСИА
+                                    </p>
+                                </div>
                             </li>
                             <li class="ubs__register-item">
-                                <h5 class="ubs__register-title">
-                                    Пройдите процедуру сбора биометрических данных.
-                                </h5>
-                                <p class="ubs__register-text">
-                                    Сотрудник банка сфотографирует вас и сделает аудиозапись голоса. Если у вас нет
-                                    подтвержденной учетной записи портала
-                                    Госуслуг, сотрудник поможет ее получить.
-                                </p>
+                                <div class="wrap__register-number">
+                                    <p class="ubs__register-number">
+                                        2
+                                    </p>
+                                </div>
+                                <div class="wrapper__register-item">
+                                    <h5 class="ubs__register-title">
+                                        Пройдите процедуру сбора биометрических данных.
+                                    </h5>
+                                    <p class="ubs__register-text">
+                                        Сотрудник банка сфотографирует вас и сделает аудиозапись голоса. Если у вас нет
+                                        подтвержденной учетной записи портала
+                                        Госуслуг, сотрудник поможет ее получить.
+                                    </p>
+                                </div>
                             </li>
-                            <li class="ubs__register-item">
-                                <h5 class="ubs__register-title">
-                                    Получите подтверждение о возможности удаленной идентификации.
-                                </h5>
-                                <p class="ubs__register-text">
-                                    Процедура подтверждения обычно занимает несколько минут, но в отдельных случаях
-                                    может потребовать до пяти дней.
-                                </p>
-                                <p class="ubs__register-text">
-                                    В личном кабинете на портале Госуслуг появится отметка об успешной регистрации
-                                    биометрических данных.
-                                </p>
+                            <li class="ubs__register-item last">
+                                <div class="wrap__register-number">
+                                    <p class="ubs__register-number">
+                                        3
+                                    </p>
+                                </div>
+                                <div class="wrapper__register-item">
+                                    <h5 class="ubs__register-title">
+                                        Получите подтверждение о возможности удаленной идентификации.
+                                    </h5>
+                                    <p class="ubs__register-text">
+                                        Процедура подтверждения обычно занимает несколько минут, но в отдельных случаях
+                                        может потребовать до пяти дней.
+                                    </p>
+                                    <p class="ubs__register-text">
+                                        В личном кабинете на портале Госуслуг появится отметка об успешной регистрации
+                                        биометрических данных.
+                                    </p>
+                                </div>
                             </li>
                         </ul>
                     </div>
+                    <div class="ubs__border border-gradient-block border-gradient-color-ubs"></div>
                     <div class="ubs__contacts">
-
+                        <h4 class="ubs__about-title contacts-title">
+                            Где зарегистрироваться?
+                        </h4>
+                        <ul class="ubs__contacts-list">
+                            <li class="ubs__contacts-item">
+                                <h5 class="ubs__contacts-title">
+                                    Центр операционного обслуживания Банка МФК
+                                </h5>
+                                <p class="ubs__contacts-text">
+                                    Тверской бульвар, д. 13, стр. 1, Москва
+                                </p>
+                                <p class="ubs__contacts-text">
+                                    Телефон: +7 495 287-06-40
+                                </p>
+                                <a href="" class="ubs__contacts-link">
+                                    Показать на карте
+                                </a>
+                            </li>
+                            <li class="ubs__contacts-item">
+                                <h5 class="ubs__contacts-title">
+                                    Дополнительный офис «Покровка»
+                                </h5>
+                                <p class="ubs__contacts-text">
+                                    ул. Покровка, д. 43, стр. 1, Москва
+                                </p>
+                                <a href="" class="ubs__contacts-link">
+                                    Показать на карте
+                                </a>
+                            </li>
+                            <li class="ubs__contacts-item">
+                                <h5 class="ubs__contacts-title">
+                                    Сибирский Филиал
+                                </h5>
+                                <p class="ubs__contacts-text">
+                                    ул. Карла Маркса, д. 93А, Красноярск
+                                </p>
+                                <a href="" class="ubs__contacts-link">
+                                    Показать на карте
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-
-            </div>
             </div>
         </section>
+
 
         <%= require('html-loader!./inc/footer.html') %>
