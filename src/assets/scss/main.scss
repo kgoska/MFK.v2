@@ -1,3 +1,4 @@
+@import './utils/utils-collection';
 @import '../../../node_modules/modern-normalize/modern-normalize.css';
 @import './base/fonts';
 @import './utils/mixins';
@@ -27,9 +28,11 @@
 @import './client/savingsaccount';
 @import './client/cards';
 @import './client/card';
+@import './client/ubs';
 @import './client/coins';
 
 @import '../css/slick.css';
+
 
 
 

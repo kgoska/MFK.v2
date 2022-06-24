@@ -69,6 +69,8 @@
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 18px;
+	display: flex;
+	justify-content: center;
 	align-items: center;
 	text-align: center;
 
@@ -84,6 +86,15 @@
 		transition: all 0.2s;
 		&:active{
 			background: #ddd;
+		}
+	}
+	&--cyan{
+		background: #00A3E0;
+		border-radius: 2px;
+		transition: all 0.2s;
+		&:active{
+			background: #00A3E0;
+			filter: brightness(85%);
 		}
 	}
 }
@@ -131,5 +142,70 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+}
+
+.tabs {
+	display: flex;
+	position: relative;
+	&__tab {
+		cursor: pointer;
+		flex-grow: 1;
+		text-align: center;
+		.active{
+			
+		}
+	}
+	&__underline {
+		position: absolute;
+	}
+	&__windows {
+
+	}
+	&__tab-window {
+		display: none;
+		&.active{
+			display: block;
+
+		}
+	}
+}
+
+.cyan-tabs{
+	background: linear-gradient(222.02deg, rgba(0, 46, 130, 0.1) -11.58%, rgba(0, 163, 224, 0.1) 125.94%);
+	padding: 0 40px;
+	border-bottom: 1px solid #929292;
+	.tabs{		
+		
+	}
+	.tabs__underline{
+		height: 100%;
+		border-bottom: 2px solid;
+		border-image: linear-gradient(274.25deg, #00205B -9.03%, #00A3E0 138.82%) 1;
+		z-index: -1;
+	}
+	.tabs__tab {
+		margin-top: 20px;
+		margin-bottom: 5px;
+		user-select: none;
+		&>span{
+			background: linear-gradient(274.25deg, #838383 -9.03%, #838383 138.82%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;	
+		}
+		&.active{
+			&>span{
+				background: linear-gradient(274.25deg, #00205B -9.03%, #00A3E0 138.82%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				text-fill-color: transparent;	
+			}
+		}
+	}
+	&__window-container{
+		padding: 0 40px;
 	}
 }

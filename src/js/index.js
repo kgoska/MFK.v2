@@ -10,6 +10,53 @@ require ('./libs/dropdown.js');
 require ('./libs/deposite.js');
 
 
+//TABS
+$(document).on('click', '[data-tab-window-id]', function(){
+	SwitchTab(this);
+	let parent = $(this).parent('[data-tab-container-id]');
+	if(parent.data('underline')){
+		let underline = parent.find('.tabs__underline');
+		let position = $(this).position();
+		underline.animate({
+			left: position.left,
+			width: $(this).width()
+		}, 200);
+	}
+});
+function SwitchTab(newTab){
+	let parent = $(newTab).parent('[data-tab-container-id]');
+	parent.find('.tabs__tab').removeClass('active');
+	$(newTab).addClass('active');
+
+	$('#' + parent.data('tab-container-id')).find('.tabs__tab-window').removeClass('active');
+	console.log($('#' + $(newTab).data('tab-window-id')));
+	$('#' + $(newTab).data('tab-window-id')).addClass('active');
+}
+function ResetTabs(){
+	$('.active[data-tab-window-id]').each(function( index, element ){
+		SwitchTab(element);
+		let parent = $(element).parent('[data-tab-container-id]');
+		if(parent.data('underline')){
+
+			let underline = parent.find('.tabs__underline')[0];
+			let position = $(element).position();
+			underline.style.left = position.left + "px";
+			underline.style.width = $(element).width() + "px";
+		};
+	});
+}
+$(window).resize(function(){
+	$(".tabs[data-underline|='true']").each(function(index, parent){
+		let tab = $(parent).find('.active[data-tab-window-id]');
+		let underline = $(parent).find('.tabs__underline')[0];
+		let position = $(tab).position();
+		underline.style.left = position.left + "px";
+		underline.style.width = $(tab).width() + "px";
+	})
+});
+
+
+//END TABS
 
 function ibg(){
 	$.each($('.ibg'), function(index, val) {
@@ -163,6 +210,7 @@ $(document).ready(function (){
 	ibg();
 	RatioW();
 	RatioH();
+	ResetTabs();
 });
 $(document).on("click",".dropbtn",function(){
 	$(this).parent(".dropdown").find(".dropdown-content").toggleClass("show");
