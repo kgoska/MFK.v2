@@ -262,12 +262,4 @@
 		border: var(--arrow-thickness) solid var(--arrow-color);
 		border-radius: var(--arrow-thickness);
 	}
-	&__body{
-		position: relative;
-		margin: 0 auto;
-		top: 0;
-		height: calc(100% - var(--arrow-thickness) * 1.5);
-		width: calc(var(--arrow-thickness)*2);
-		background: var(--arrow-color);
-	}
 }
