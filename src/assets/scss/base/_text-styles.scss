@@ -78,6 +78,20 @@
 			font-size: 16px;
 		}
 	}
+	&--XS{
+		@include fSize(992, 440, 14, 12);
+		line-height: 1.1em;
+		&--static{
+			font-size: 14px;
+		}
+	}
+	&--XXS{
+		@include fSize(992, 440, 12, 10);
+		line-height: 1.1em;
+		&--static{
+			font-size: 12px;
+		}
+	}
 	&--uppercase{
 		text-transform: uppercase;
 	}
