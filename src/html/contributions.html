@@ -3,8 +3,350 @@
         <div id="info" data-current-id="contributions" data-main-menu-current-id="private-client-head"></div>
 
         <!-- Main content-->
+        <section>
+            <div class="container">
+                <div class="breadcrumbs">
+                    <div class="breadcrumbs__step">Главная</div>
+                    <div class="breadcrumbs__step">Частным клиентам</div>
+                    <div class="breadcrumbs__step">Вклады и счета</div>
+                    <div class="breadcrumbs__step">Вклады</div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="page page--with-sidebar">
+                    <div class="page__sidebar sidebar">
+                        <div class="sidebar__overlay"></div>
+                        <div class="sidebar__items">
+                            <div class="sidebar__item sidebar__item--selected">
+                                <div class="sidebar__item-text">
+                                    <a href="contributions.html">Вклады</a>
+                                </div>
+                                <div class="sidebar__item-icon"></div>
+                            </div>
+                            <div class="sidebar__item">
+                                <div class="sidebar__item-text">
+                                    <a href="settlement-service.html">Расчетное
+                                        обслуживание</a>
+                                </div>
+                                <div class="sidebar__item-icon"></div>
+                            </div>
+                            <div class="sidebar__item">
+                                <div class="sidebar__item-text">
+                                    <a href="savingsaccount.html">Накопительный счет</a>
+                                </div>
+                                <div class="sidebar__item-icon"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Main Content -->
+                    <div class="operations__item">
+                        <h2 class="second__title-settlement-service contributions_title">Вклады</h2>
+                        <div class="contributions__filter">
 
-        <section class="container">
+                            <h5 class="contribuitions__second-title">ПОДБЕРИТЕ ВКЛАД</h5>
+                            <wrapper class="contributions__wrapper">
+                                <div class="filter__contributions-cheks">
+                                    <form class="filter__option-form contributions__form"
+                                        onchange="output.value = parseInt(rangeField.value)"
+                                        oninput="changeVar(rangeField.value,rangeField.min,rangeField.max)">
+                                        <label class="sliderBar contributions__bar">Хочу вложить
+                                            <output id="output" value="1">1</output>
+                                            <span class="">
+                                                тыс. рублей
+                                            </span>
+                                        </label>
+                                        <input id="rangeField" type="range" list="mydata" min="0" max="100" value="1"
+                                            step="1">
+                                    </form>
+                                </div>
+                                <div class="filter__contributions-cheks">
+                                    <form class="filter__option-form contributions__form"
+                                        onchange="output.value=parseInt(rangeField.value)"
+                                        oninput="changeVar(rangeField.value,rangeField.min, rangeField.max)">
+                                        <label class="sliderBar contributions__bar">На срок
+                                            <output id="output" value="1">1</output>
+                                            <span class="">
+                                                год/лет
+                                            </span>
+                                        </label>
+                                        <input id="rangeField" type="range" list="mydata" min="0" max="35" value="1"
+                                            step="1">
+                                    </form>
+                                </div>
+                                <wrapper class="filter__contributions-cheks">
+                                    <div class="filter__item contributions__item">
+                                        <input class="checkbox" type="checkbox" name="filter" id="withdrawal">
+                                        <label for="withdrawal">Частичное снятие</label>
+                                    </div>
+                                    <div class="filter__item contributions__item">
+                                        <input class="checkbox" type="checkbox" name="filter" id="payment">
+                                        <label for="payment">Ежемесячная выплата</label>
+                                    </div>
+                                    <div class="filter__item contributions__item">
+                                        <input class="checkbox" type="checkbox" name="filter" id="replenishment">
+                                        <label for="replenishment">Возможность пополнения</label>
+                                    </div>
+                                </wrapper>
+                                <div class="filter__contributions-cheks">
+                                    <button class="btn btn-filter contributions-btn">
+                                        Применить
+                                    </button>
+                                </div>
+                            </wrapper>
+                        </div>
+                        <div class="contributions-type">
+                            <div class="contributions-type__picture">
+                                <img class="contributions__picture" src="../assets/img/images/optimal.jpg"
+                                    alt="father and daughter">
+                            </div>
+                            <div class="contributions-type__content">
+                                <h4 class="contributions-type__title" id="title">
+                                    Оптимальный
+                                </h4>
+                                <div class="contributions-type__comtainer" id="percent">
+                                    <p class="contributions-type__text">
+                                        Ставка
+                                    </p>
+                                    <h6 class="contributions-type__description">
+                                        5.6 %
+                                    </h6>
+                                </div>
+                                <div class="contributions-type__comtainer" id="timecontributions">
+                                    <p class="contributions-type__text">
+                                        Срок вклада
+                                    </p>
+                                    <h6 class="contributions-type__description">
+                                        6 месяцев
+                                    </h6>
+                                </div>
+                                <div class="contributions-type__comtainer" id="minimalcontributions">
+                                    <p class="contributions-type__text">
+                                        Минимальный взнос</p>
+                                    <h6 class="contributions-type__description">
+                                        100 000 руб.
+                                    </h6>
+                                </div>
+                                <div class="contributions-type__comtainer" id="checks1">
+                                    <p class="contributions-type__text">
+                                        Частичное снятие
+                                    </p>
+                                    <img class="contributions-type-picture" src="assets/img/images/close.png" width="14"
+                                        height="14" />
+                                </div>
+                                <div class="contributions-type__comtainer" id="checks2">
+                                    <p class="contributions-type__text">
+                                        Возможность пополнения
+                                    </p>
+                                    <img class="contributions-type-picture" src="assets/img/images/close.png" width="14"
+                                        height="14" />
+                                </div>
+                                <div class="contributions-type__comtainer" id="checks3">
+                                    <p class="contributions-type__text">
+                                        Ежемесячная выплата
+                                    </p>
+                                    <img class="contributions-type-picture" src="assets/img/images/Accept.png"
+                                        width="14" height="14" />
+                                </div>
+                                <div class="contributions-type__comtainer" id="btn1">
+                                    <button class="btn btn-contributions">Получить консультацию</button>
+                                </div>
+                                <div class="contributions-type__comtainer" id="btn2">
+                                    <button class="btn btn-contributions no-active">Подробнее о вкладе</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contributions-type">
+                            <div class="contributions-type__picture">
+                                <img class="contributions__picture" src="../assets/img/images/comfortable.jpg"
+                                    alt="comfortable">
+                            </div>
+                            <div class="contributions-type__content">
+                                <h4 class="contributions-type__title" id="title">
+                                    Удобный
+                                </h4>
+                                <div class="contributions-type__comtainer" id="percent">
+                                    <p class="contributions-type__text">
+                                        Ставка
+                                    </p>
+                                    <h6 class="contributions-type__description">
+                                        6.8 %
+                                    </h6>
+                                </div>
+                                <div class="contributions-type__comtainer" id="timecontributions">
+                                    <p class="contributions-type__text">
+                                        Срок вклада
+                                    </p>
+                                    <h6 class="contributions-type__description">
+                                        6 месяцев
+                                    </h6>
+                                </div>
+                                <div class="contributions-type__comtainer" id="minimalcontributions">
+                                    <p class="contributions-type__text">
+                                        Минимальный взнос</p>
+                                    <h6 class="contributions-type__description">
+                                        50 000 руб.
+                                    </h6>
+                                </div>
+                                <div class="contributions-type__comtainer" id="checks1">
+                                    <p class="contributions-type__text">
+                                        Частичное снятие
+                                    </p>
+                                    <img class="contributions-type-picture" src="assets/img/images/Accept.png"
+                                        width="14" height="14" />
+                                </div>
+                                <div class="contributions-type__comtainer" id="checks2">
+                                    <p class="contributions-type__text">
+                                        Возможность пополнения
+                                    </p>
+                                    <img class="contributions-type-picture" src="assets/img/images/Accept.png"
+                                        width="14" height="14" />
+                                </div>
+                                <div class="contributions-type__comtainer" id="checks3">
+                                    <p class="contributions-type__text">
+                                        Ежемесячная выплата
+                                    </p>
+                                    <img class="contributions-type-picture" src="assets/img/images/Accept.png"
+                                        width="14" height="14" />
+                                </div>
+                                <div class="contributions-type__comtainer" id="btn1">
+                                    <button class="btn btn-contributions">Получить консультацию</button>
+                                </div>
+                                <div class="contributions-type__comtainer" id="btn2">
+                                    <button class="btn btn-contributions no-active">Подробнее о вкладе</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contributions-type">
+                            <div class="contributions-type__picture">
+                                <img class="contributions__picture" src="../assets/img/images/maximum.jpg"
+                                    alt="maximum">
+                            </div>
+                            <div class="contributions-type__content">
+                                <h4 class="contributions-type__title" id="title">
+                                    МФК Максимум
+                                </h4>
+                                <div class="contributions-type__comtainer" id="percent">
+                                    <p class="contributions-type__text">
+                                        Ставка
+                                    </p>
+                                    <h6 class="contributions-type__description">
+                                        6.85 %
+                                    </h6>
+                                </div>
+                                <div class="contributions-type__comtainer" id="timecontributions">
+                                    <p class="contributions-type__text">
+                                        Срок вклада
+                                    </p>
+                                    <h6 class="contributions-type__description">
+                                        6 месяцев
+                                    </h6>
+                                </div>
+                                <div class="contributions-type__comtainer" id="minimalcontributions">
+                                    <p class="contributions-type__text">
+                                        Минимальный взнос</p>
+                                    <h6 class="contributions-type__description">
+                                        1 500 000 руб.
+                                    </h6>
+                                </div>
+                                <div class="contributions-type__comtainer" id="checks1">
+                                    <p class="contributions-type__text">
+                                        Частичное снятие
+                                    </p>
+                                    <img class="contributions-type-picture" src="assets/img/images/close.png" width="14"
+                                        height="14" />
+                                </div>
+                                <div class="contributions-type__comtainer" id="checks2">
+                                    <p class="contributions-type__text">
+                                        Возможность пополнения
+                                    </p>
+                                    <img class="contributions-type-picture" src="assets/img/images/close.png" width="14"
+                                        height="14" />
+                                </div>
+                                <div class="contributions-type__comtainer" id="checks3">
+                                    <p class="contributions-type__text">
+                                        Ежемесячная выплата
+                                    </p>
+                                    <img class="contributions-type-picture" src="assets/img/images/close.png" width="14"
+                                        height="14" />
+                                </div>
+                                <div class="contributions-type__comtainer" id="btn1">
+                                    <button class="btn btn-contributions">Получить консультацию</button>
+                                </div>
+                                <div class="contributions-type__comtainer" id="btn2">
+                                    <button class="btn btn-contributions no-active">Подробнее о вкладе</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contributions-type">
+                            <div class="contributions-type__picture">
+                                <img class="contributions__picture" src="../assets/img/images/advantageous.jpg"
+                                    alt="father and daughter">
+                            </div>
+                            <div class="contributions-type__content">
+                                <h4 class="contributions-type__title" id="title">
+                                    МФК Выгодный**
+                                </h4>
+                                <div class="contributions-type__comtainer" id="percent">
+                                    <p class="contributions-type__text">
+                                        Ставка
+                                    </p>
+                                    <h6 class="contributions-type__description">
+                                        23.10 %
+                                    </h6>
+                                </div>
+                                <div class="contributions-type__comtainer" id="timecontributions">
+                                    <p class="contributions-type__text">
+                                        Срок вклада
+                                    </p>
+                                    <h6 class="contributions-type__description">
+                                        3 месяца
+                                    </h6>
+                                </div>
+                                <div class="contributions-type__comtainer" id="minimalcontributions">
+                                    <p class="contributions-type__text">
+                                        Минимальный взнос</p>
+                                    <h6 class="contributions-type__description">
+                                        100 000 руб.
+                                    </h6>
+                                </div>
+                                <div class="contributions-type__comtainer" id="checks1">
+                                    <p class="contributions-type__text">
+                                        Частичное снятие
+                                    </p>
+                                    <img class="contributions-type-picture" src="assets/img/images/close.png" width="14"
+                                        height="14" />
+                                </div>
+                                <div class="contributions-type__comtainer" id="checks2">
+                                    <p class="contributions-type__text">
+                                        Возможность пополнения
+                                    </p>
+                                    <img class="contributions-type-picture" src="assets/img/images/close.png" width="14"
+                                        height="14" />
+                                </div>
+                                <div class="contributions-type__comtainer" id="checks3">
+                                    <p class="contributions-type__text">
+                                        Ежемесячная выплата
+                                    </p>
+                                    <img class="contributions-type-picture" src="assets/img/images/close.png" width="14"
+                                        height="14" />
+                                </div>
+                                <div class="contributions-type__comtainer" id="btn1">
+                                    <button class="btn btn-contributions">Получить консультацию</button>
+                                </div>
+                                <div class="contributions-type__comtainer" id="btn2">
+                                    <button class="btn btn-contributions no-active">Подробнее о вкладе</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- <section class="container">
             <div class="second__header-operations">
                 <div class="second__text-credits__list">
                     <a class="second__text-credits" href="#">Главная /</a>
@@ -51,307 +393,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="operations__item">
-                    <h2 class="second__title-settlement-service contributions_title">Вклады</h2>
-                    <div class="contributions__filter">
-
-                        <h5 class="contribuitions__second-title">ПОДБЕРИТЕ ВКЛАД</h5>
-                        <wrapper class="contributions__wrapper">
-                            <div class="filter__contributions-cheks">
-                                <form class="filter__option-form contributions__form"
-                                    onchange="output.value = parseInt(rangeField.value)"
-                                    oninput="changeVar(rangeField.value,rangeField.min,rangeField.max)">
-                                    <label class="sliderBar contributions__bar">Хочу вложить
-                                        <output id="output" value="1">1</output>
-                                        <span class="">
-                                            тыс. рублей
-                                        </span>
-                                    </label>
-                                    <input id="rangeField" type="range" list="mydata" min="0" max="100" value="1"
-                                        step="1">
-                                </form>
-                            </div>
-                            <div class="filter__contributions-cheks">
-                                <form class="filter__option-form contributions__form"
-                                    onchange="output.value=parseInt(rangeField.value)"
-                                    oninput="changeVar(rangeField.value,rangeField.min, rangeField.max)">
-                                    <label class="sliderBar contributions__bar">На срок
-                                        <output id="output" value="1">1</output>
-                                        <span class="">
-                                            год/лет
-                                        </span>
-                                    </label>
-                                    <input id="rangeField" type="range" list="mydata" min="0" max="35" value="1"
-                                        step="1">
-                                </form>
-                            </div>
-                            <wrapper class="filter__contributions-cheks">
-                                <div class="filter__item contributions__item">
-                                    <input class="checkbox" type="checkbox" name="filter" id="withdrawal">
-                                    <label for="withdrawal">Частичное снятие</label>
-                                </div>
-                                <div class="filter__item contributions__item">
-                                    <input class="checkbox" type="checkbox" name="filter" id="payment">
-                                    <label for="payment">Ежемесячная выплата</label>
-                                </div>
-                                <div class="filter__item contributions__item">
-                                    <input class="checkbox" type="checkbox" name="filter" id="replenishment">
-                                    <label for="replenishment">Возможность пополнения</label>
-                                </div>
-                            </wrapper>
-                            <div class="filter__contributions-cheks">
-                                <button class="btn btn-filter contributions-btn">
-                                    Применить
-                                </button>
-                            </div>
-                        </wrapper>
-                    </div>
-                    <div class="contributions-type">
-                        <div class="contributions-type__picture">
-                            <img class="contributions__picture" src="../assets/img/images/optimal.jpg"
-                                alt="father and daughter">
-                        </div>
-                        <div class="contributions-type__content">
-                            <h4 class="contributions-type__title" id="title">
-                                Оптимальный
-                            </h4>
-                            <div class="contributions-type__comtainer" id="percent">
-                                <p class="contributions-type__text">
-                                    Ставка
-                                </p>
-                                <h6 class="contributions-type__description">
-                                    5.6 %
-                                </h6>
-                            </div>
-                            <div class="contributions-type__comtainer" id="timecontributions">
-                                <p class="contributions-type__text">
-                                    Срок вклада
-                                </p>
-                                <h6 class="contributions-type__description">
-                                    6 месяцев
-                                </h6>
-                            </div>
-                            <div class="contributions-type__comtainer" id="minimalcontributions">
-                                <p class="contributions-type__text">
-                                    Минимальный взнос</p>
-                                <h6 class="contributions-type__description">
-                                    100 000 руб.
-                                </h6>
-                            </div>
-                            <div class="contributions-type__comtainer" id="checks1">
-                                <p class="contributions-type__text">
-                                    Частичное снятие
-                                </p>
-                                <img class="contributions-type-picture" src="assets/img/images/close.png" width="14"
-                                    height="14" />
-                            </div>
-                            <div class="contributions-type__comtainer" id="checks2">
-                                <p class="contributions-type__text">
-                                    Возможность пополнения
-                                </p>
-                                <img class="contributions-type-picture" src="assets/img/images/close.png" width="14"
-                                    height="14" />
-                            </div>
-                            <div class="contributions-type__comtainer" id="checks3">
-                                <p class="contributions-type__text">
-                                    Ежемесячная выплата
-                                </p>
-                                <img class="contributions-type-picture" src="assets/img/images/Accept.png" width="14"
-                                    height="14" />
-                            </div>
-                            <div class="contributions-type__comtainer" id="btn1">
-                                <button class="btn btn-contributions">Получить консультацию</button>
-                            </div>
-                            <div class="contributions-type__comtainer" id="btn2">
-                                <button class="btn btn-contributions">Подробнее о вкладе</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contributions-type">
-                        <div class="contributions-type__picture">
-                            <img class="contributions__picture" src="../assets/img/images/comfortable.jpg"
-                                alt="comfortable">
-                        </div>
-                        <div class="contributions-type__content">
-                            <h4 class="contributions-type__title" id="title">
-                                Удобный
-                            </h4>
-                            <div class="contributions-type__comtainer" id="percent">
-                                <p class="contributions-type__text">
-                                    Ставка
-                                </p>
-                                <h6 class="contributions-type__description">
-                                    6.8 %
-                                </h6>
-                            </div>
-                            <div class="contributions-type__comtainer" id="timecontributions">
-                                <p class="contributions-type__text">
-                                    Срок вклада
-                                </p>
-                                <h6 class="contributions-type__description">
-                                    6 месяцев
-                                </h6>
-                            </div>
-                            <div class="contributions-type__comtainer" id="minimalcontributions">
-                                <p class="contributions-type__text">
-                                    Минимальный взнос</p>
-                                <h6 class="contributions-type__description">
-                                    50 000 руб.
-                                </h6>
-                            </div>
-                            <div class="contributions-type__comtainer" id="checks1">
-                                <p class="contributions-type__text">
-                                    Частичное снятие
-                                </p>
-                                <img class="contributions-type-picture" src="assets/img/images/Accept.png" width="14"
-                                    height="14" />
-                            </div>
-                            <div class="contributions-type__comtainer" id="checks2">
-                                <p class="contributions-type__text">
-                                    Возможность пополнения
-                                </p>
-                                <img class="contributions-type-picture" src="assets/img/images/Accept.png" width="14"
-                                    height="14" />
-                            </div>
-                            <div class="contributions-type__comtainer" id="checks3">
-                                <p class="contributions-type__text">
-                                    Ежемесячная выплата
-                                </p>
-                                <img class="contributions-type-picture" src="assets/img/images/Accept.png" width="14"
-                                    height="14" />
-                            </div>
-                            <div class="contributions-type__comtainer" id="btn1">
-                                <button class="btn btn-contributions">Получить консультацию</button>
-                            </div>
-                            <div class="contributions-type__comtainer" id="btn2">
-                                <button class="btn btn-contributions">Подробнее о вкладе</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contributions-type">
-                        <div class="contributions-type__picture">
-                            <img class="contributions__picture" src="../assets/img/images/maximum.jpg" alt="maximum">
-                        </div>
-                        <div class="contributions-type__content">
-                            <h4 class="contributions-type__title" id="title">
-                                МФК Максимум
-                            </h4>
-                            <div class="contributions-type__comtainer" id="percent">
-                                <p class="contributions-type__text">
-                                    Ставка
-                                </p>
-                                <h6 class="contributions-type__description">
-                                    6.85 %
-                                </h6>
-                            </div>
-                            <div class="contributions-type__comtainer" id="timecontributions">
-                                <p class="contributions-type__text">
-                                    Срок вклада
-                                </p>
-                                <h6 class="contributions-type__description">
-                                    6 месяцев
-                                </h6>
-                            </div>
-                            <div class="contributions-type__comtainer" id="minimalcontributions">
-                                <p class="contributions-type__text">
-                                    Минимальный взнос</p>
-                                <h6 class="contributions-type__description">
-                                    1 500 000 руб.
-                                </h6>
-                            </div>
-                            <div class="contributions-type__comtainer" id="checks1">
-                                <p class="contributions-type__text">
-                                    Частичное снятие
-                                </p>
-                                <img class="contributions-type-picture" src="assets/img/images/close.png" width="14"
-                                    height="14" />
-                            </div>
-                            <div class="contributions-type__comtainer" id="checks2">
-                                <p class="contributions-type__text">
-                                    Возможность пополнения
-                                </p>
-                                <img class="contributions-type-picture" src="assets/img/images/close.png" width="14"
-                                    height="14" />
-                            </div>
-                            <div class="contributions-type__comtainer" id="checks3">
-                                <p class="contributions-type__text">
-                                    Ежемесячная выплата
-                                </p>
-                                <img class="contributions-type-picture" src="assets/img/images/close.png" width="14"
-                                    height="14" />
-                            </div>
-                            <div class="contributions-type__comtainer" id="btn1">
-                                <button class="btn btn-contributions">Получить консультацию</button>
-                            </div>
-                            <div class="contributions-type__comtainer" id="btn2">
-                                <button class="btn btn-contributions">Подробнее о вкладе</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contributions-type">
-                        <div class="contributions-type__picture">
-                            <img class="contributions__picture" src="../assets/img/images/advantageous.jpg"
-                                alt="father and daughter">
-                        </div>
-                        <div class="contributions-type__content">
-                            <h4 class="contributions-type__title" id="title">
-                                МФК Выгодный**
-                            </h4>
-                            <div class="contributions-type__comtainer" id="percent">
-                                <p class="contributions-type__text">
-                                    Ставка
-                                </p>
-                                <h6 class="contributions-type__description">
-                                    23.10 %
-                                </h6>
-                            </div>
-                            <div class="contributions-type__comtainer" id="timecontributions">
-                                <p class="contributions-type__text">
-                                    Срок вклада
-                                </p>
-                                <h6 class="contributions-type__description">
-                                    3 месяца
-                                </h6>
-                            </div>
-                            <div class="contributions-type__comtainer" id="minimalcontributions">
-                                <p class="contributions-type__text">
-                                    Минимальный взнос</p>
-                                <h6 class="contributions-type__description">
-                                    100 000 руб.
-                                </h6>
-                            </div>
-                            <div class="contributions-type__comtainer" id="checks1">
-                                <p class="contributions-type__text">
-                                    Частичное снятие
-                                </p>
-                                <img class="contributions-type-picture" src="assets/img/images/close.png" width="14"
-                                    height="14" />
-                            </div>
-                            <div class="contributions-type__comtainer" id="checks2">
-                                <p class="contributions-type__text">
-                                    Возможность пополнения
-                                </p>
-                                <img class="contributions-type-picture" src="assets/img/images/close.png" width="14"
-                                    height="14" />
-                            </div>
-                            <div class="contributions-type__comtainer" id="checks3">
-                                <p class="contributions-type__text">
-                                    Ежемесячная выплата
-                                </p>
-                                <img class="contributions-type-picture" src="assets/img/images/close.png" width="14"
-                                    height="14" />
-                            </div>
-                            <div class="contributions-type__comtainer" id="btn1">
-                                <button class="btn btn-contributions">Получить консультацию</button>
-                            </div>
-                            <div class="contributions-type__comtainer" id="btn2">
-                                <button class="btn btn-contributions">Подробнее о вкладе</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
-        </section>
+        </section> -->
 
         <%= require('html-loader!./inc/footer.html') %>
 
