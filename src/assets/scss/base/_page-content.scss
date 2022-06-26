@@ -146,14 +146,10 @@
 }
 
 .tabs {
-	display: flex;
 	position: relative;
 	&__tab {
 		cursor: pointer;
-		flex-grow: 1;
-		text-align: center;
 		.active{
-			
 		}
 	}
 	&__underline {
@@ -179,7 +175,8 @@
 	padding: 0 40px;
 	border-bottom: 1px solid #929292;
 	.tabs{		
-		
+		display: flex;
+		justify-content: space-around;
 	}
 	.tabs__underline{
 		height: 100%;
@@ -188,10 +185,15 @@
 		z-index: -1;
 	}
 	.tabs__tab {
+		text-align: center;
 		margin-top: 20px;
 		margin-bottom: 5px;
 		user-select: none;
 		&>span{
+			padding: 0 20px;
+			@media screen and (max-width: 550px) {
+				padding: 0 5px;
+			}
 			background: linear-gradient(274.25deg, #838383 -9.03%, #838383 138.82%);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
