@@ -5,9 +5,18 @@
 var $ = require( "jquery" );
 
 require ('./libs/slick.min.js');
-require ('./libs/mobile-menu.js');
+// require ('./libs/mobile-menu.js');
 require ('./libs/dropdown.js');
 require ('./libs/deposite.js');
+
+
+//Mobile burger
+$(document).on('click', '#burger-open', function(){
+	$('#mobile-menu').addClass('is-open');
+});
+$(document).on('click', '#burger-close', function(){
+	$('#mobile-menu').removeClass('is-open');
+});
 
 
 //TABS
@@ -152,7 +161,7 @@ $(document).ready(function (){
 	current_menu_id = $('#info').data('current-id');
 	main_menu_id = $('#info').data('main-menu-current-id');
 	$('#' + current_menu_id).addClass('current__page');
-	$('#' + main_menu_id + '>a').addClass('current');
+	$('#' + main_menu_id).addClass('active');
 
 	$(".credit-slider").slick({
 		arrows:false,
