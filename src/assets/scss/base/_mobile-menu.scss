@@ -30,12 +30,22 @@
     fill: white;
 }
 .logo-mobile{
-        display: flex;
-        align-items: center;
-        @media screen and (max-width:767px) {
-            
-        }
+    display: flex;
+    align-items: center;
+    @media screen and (max-width:767px) {
+        
+    }
+    &>img{
+        height: 40px;
+        width: auto;
+        margin-right: 12px;
+    }
+    &>span{
+        word-spacing: 1000px;
+        line-height: 1.2em;
+    }
 }
+
 .mobile {
     &__header{
         display: flex;
