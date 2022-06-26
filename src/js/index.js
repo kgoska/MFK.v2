@@ -212,8 +212,12 @@ $(document).ready(function (){
 	RatioH();
 	ResetTabs();
 });
+$(document).on('click', '.coin-img__item', function(){
+	console.log($(this).parents('.coin-img').find('.coin-img__main>img').prop('src'));
+	$(this).parents('.coin-img').find('.coin-img__main>img').prop('src',$(this).children('img').prop('src'));
+});
 $(document).on("click",".dropbtn",function(){
-	$(this).parent(".dropdown").find(".dropdown-content").toggleClass("show");
+	$(this).parent(".dropdown").parents(".dropdown-content").toggleClass("show");
 });
 
 $('.mobile-menu__item-wrap').click((e) => {
