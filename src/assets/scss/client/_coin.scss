@@ -1,5 +1,8 @@
 .coin {
-	--coin-gap: calc(45 / 1440 * 100%);
+	--coin-gap: calc(45 / 664 * 100%);
+	@media screen and (max-width: 600px) {
+		--coin-gap: 0;
+	}
 	&__info {}
 }
 .coin-info {
@@ -29,6 +32,10 @@
 	--coin-preview-padding: calc(18 / 357 *100%);
 	@media screen and (max-width: 768px) {
 		--coin-preview-padding: calc(10 / 357 *100%);
+	}
+	@media screen and (max-width: 600px) {
+		--coin-padding: calc(30 / 357 * 100%);
+		margin: 0 10% 50px;
 	}
 	&__main-wrap {
 		padding: var(--coin-padding);
@@ -63,13 +70,21 @@
 	}
 }
 .coin-attr {
+	margin-bottom: 50px;
 	&__prop {}
 	&__price {}
 }
 .coin-prop {
 	margin-bottom: 30px;
-	&__items {}
-	&__item {	
+	&__items {
+		@media screen and (max-width: 600px) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	&__item {
 		&--art {
 			padding-bottom: 10px;
 		}
