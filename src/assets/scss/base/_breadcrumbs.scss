@@ -16,5 +16,8 @@
 			content: '/';
 			margin: 0 15px;
 		}
+		&>a:active, &>a:visited, &>a:link {
+			color: #001843;
+		}
 	}
 }

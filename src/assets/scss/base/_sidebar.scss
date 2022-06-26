@@ -8,13 +8,11 @@
 	.page__sidebar {
 		flex: 0 0 31%;
 		margin-right: 30px;
-		flex: 0 0 30%;
-		margin-right: 20px;
 		@media (max-width: 991px) {
 			margin: 0 0 51px;
 		}
 	}
-	.page__content {
+	&__content {
 		flex: 1 0 0;
 	}
 }
