@@ -1,24 +1,37 @@
 .coin {
-	--coin-gap: calc(45 / 1440 * 100vw);
+	--coin-gap: calc(45 / 1440 * 100%);
 	&__info {}
 }
 .coin-info {
 
 	&__wrap {
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-start;
 		align-items: stretch;
+		@media screen and (max-width: 600px) {
+			flex-direction: column;
+			justify-content: center;
+		}
 	}
 	&__left {
-		flex: 0 0 calc(45% - var(--coin-gap));
+		flex: 0 0 45%;
+		margin-right: var(--coin-gap);
+		@media screen and (max-width: 1200px) {
+			flex: 0 0 35%;
+		}
 	}
 	&__right {
-		flex: 0 0 calc(55% - var(--coin-gap));
+		flex: 1 0 0;
 	}
 }
 .coin-img {
+	--coin-padding: calc(61 / 357 * 100%);
+	--coin-preview-padding: calc(18 / 357 *100%);
+	@media screen and (max-width: 768px) {
+		--coin-preview-padding: calc(10 / 357 *100%);
+	}
 	&__main-wrap {
-		padding: 61px;
+		padding: var(--coin-padding);
 		background: #FFFFFF;
 		border: 1px solid #D1D1D1;
 		box-shadow: 0px 4px 4px rgba(0, 32, 91, 0.15);
@@ -37,7 +50,7 @@
 	}
 	&__item {
 		flex: 0 0 calc(111 / 357 * 100%);
-		padding: 18px;
+		padding: var(--coin-preview-padding);
 		background: #FFFFFF;
 		border: 1px solid #D1D1D1;
 		box-shadow: 0px 4px 4px rgba(0, 32, 91, 0.15);
