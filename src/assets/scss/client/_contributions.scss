@@ -120,11 +120,11 @@
                 margin:30px 10px
             }
             @media screen and (max-width: 1199px){
-                grid-template-columns: 0.7fr 0.5fr 0.2fr 0.3fr 0.3fr 0.8fr ;
+                grid-template-columns: 0.5fr 0.2fr 0.2fr 0.3fr 0.3fr 0.8fr ;
                 margin: 15px 10px;
             }
             @media screen and (max-width:575px){
-                grid-template-columns: 0.5fr 1fr 1fr ;
+                grid-template-columns: 0.5fr 0.7fr 1fr ;
                 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
             }
             #title{
@@ -191,9 +191,10 @@
                 }
             }
             #btn1{
-                grid-column: 1/4;
+                grid-column: 1/5;
                 grid-row: 4/5;
                 @media screen and (max-width:575px){
+                    grid-column: 1/4;
                     grid-row: 6/7;
                 }
 
@@ -202,12 +203,12 @@
                 grid-column: 4/7;
                 grid-row: 4/5;
                 justify-self: end;
-                
                 @media screen and (max-width:575px){
                     grid-column: 1/4;
                     grid-row: 5/6;
                     margin-left: 0;
                     margin-bottom: 15px;
+                    justify-self: inherit;
                 }
             }
 		}
