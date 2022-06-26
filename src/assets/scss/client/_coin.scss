@@ -1,5 +1,5 @@
 .coin {
-	--coin-gap: calc(45 / 1440 * 100vw);
+	--coin-gap: calc(45 / 664 * 100%);
 	&__info {}
 }
 .coin-info {
@@ -13,7 +13,7 @@
 		flex: 0 0 calc(45% - var(--coin-gap));
 	}
 	&__right {
-		flex: 0 0 calc(55% - var(--coin-gap));
+		flex: 0 0 55%;
 	}
 }
 .coin-img {

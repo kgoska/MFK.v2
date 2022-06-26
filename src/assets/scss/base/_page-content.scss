@@ -172,7 +172,10 @@
 }
 
 .cyan-tabs{
-	background: linear-gradient(222.02deg, rgba(0, 46, 130, 0.1) -11.58%, rgba(0, 163, 224, 0.1) 125.94%);
+	&--bg-cyan-gradient{
+		background: linear-gradient(222.02deg, rgba(0, 46, 130, 0.1) -11.58%, rgba(0, 163, 224, 0.1) 125.94%);	
+	}
+	
 	padding: 0 40px;
 	border-bottom: 1px solid #929292;
 	.tabs{		
@@ -181,7 +184,7 @@
 	.tabs__underline{
 		height: 100%;
 		border-bottom: 2px solid;
-		border-image: linear-gradient(274.25deg, #00205B -9.03%, #00A3E0 138.82%) 1;
+		border-image: linear-gradient(274.25deg, #00205B 0%, #00A3E0 100%) 1;
 		z-index: -1;
 	}
 	.tabs__tab {
