@@ -38,7 +38,7 @@ module.exports = {
       publicPath: '/' - relative path for dist folder (js,css etc)
       publicPath: './' (dot before /) - absolute path for dist folder (js,css etc)
     */
-    publicPath: '/'
+    publicPath: './'
   },
   optimization: {
     splitChunks: {
@@ -151,7 +151,7 @@ module.exports = {
     // Vue loader
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].css`//[contenthash]
+      filename: `${PATHS.assets}css/[name].[contenthash].css`
     }),
     new CopyWebpackPlugin({
       patterns: [

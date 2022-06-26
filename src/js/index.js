@@ -96,7 +96,9 @@ function RatioH(){
 		$(this).css("width", (parseFloat($(this).css("height")) * ratioMultiplier).toString() + "px");
 	});
 }
-
+$(document).on('click', '.dropbtn', function(){
+	$("#myDropdown").toggleClass('show');
+});
 //READMORE START
 $(document).on('click', '.readmore', function(event) {
 	$(this).toggleClass("toggled");
