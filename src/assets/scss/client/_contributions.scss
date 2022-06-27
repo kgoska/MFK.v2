@@ -91,7 +91,8 @@
 }
 .contributions-type {
     display: flex;
-    flex: 0 0 100%;
+    // flex: 0 0 100%;
+    justify-content: center;
     margin:0 0 41px;
     background: #FFFFFF;
     border: 1px solid #D1D1D1;

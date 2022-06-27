@@ -6,10 +6,10 @@
 
 		<section class="container">
 			<div class="second__header-operations">
-				<div class="second__text-credits__list">
-					<a class="second__text-credits" href="#">Главная /</a>
-					<a class="second__text-credits" href="contributions.html">Частным клиентам /</a>
-					<a class="second__text-credits current-second__text-credits" href="cards.html">Карты</a>
+				<div class="breadcrumbs">
+					<div class="breadcrumbs__step"><a href="">Главная</a></div>
+					<div class="breadcrumbs__step"><a href="contributions.html">Частным клиентам</a></div>
+					<div class="breadcrumbs__step"><span>Карты</span></div>
 				</div>
 			</div>
 			<div class="card-list">
@@ -21,7 +21,8 @@
 						<span>Выберите тип карты</span>
 					</div>
 					<div class="card-list__filter-buttons">
-						<button class="card-list__filter-button filter-button active" data-filter-container-id="card-list" data-filter='
+						<button class="card-list__filter-button filter-button active"
+							data-filter-container-id="card-list" data-filter='
 							{
 								"classic": true,
 								"wage": true,
@@ -33,42 +34,48 @@
 						'>
 							Все карты
 						</button>
-						<button class="card-list__filter-button filter-button" data-filter-container-id="card-list" data-filter='
+						<button class="card-list__filter-button filter-button" data-filter-container-id="card-list"
+							data-filter='
 							{
 								"classic": true
 							}
 						'>
 							Классическая
 						</button>
-						<button class="card-list__filter-button filter-button" data-filter-container-id="card-list" data-filter='
+						<button class="card-list__filter-button filter-button" data-filter-container-id="card-list"
+							data-filter='
 							{
 								"wage": true
 							}
 						'>
 							Зарплатная
 						</button>
-						<button class="card-list__filter-button filter-button" data-filter-container-id="card-list" data-filter='
+						<button class="card-list__filter-button filter-button" data-filter-container-id="card-list"
+							data-filter='
 							{
 								"pension": true
 							}
 						'>
 							Пенсионная
 						</button>
-						<button class="card-list__filter-button filter-button" data-filter-container-id="card-list" data-filter='
+						<button class="card-list__filter-button filter-button" data-filter-container-id="card-list"
+							data-filter='
 							{
 								"cumulative": true
 							}
 						'>
 							Накопительная
 						</button>
-						<button class="card-list__filter-button filter-button" data-filter-container-id="card-list" data-filter='
+						<button class="card-list__filter-button filter-button" data-filter-container-id="card-list"
+							data-filter='
 							{
 								"virtual": true
 							}
 						'>
 							Вертуальная
 						</button>
-						<button class="card-list__filter-button filter-button" data-filter-container-id="card-list" data-filter='
+						<button class="card-list__filter-button filter-button" data-filter-container-id="card-list"
+							data-filter='
 							{
 								"premium": true
 							}
@@ -157,7 +164,8 @@
 							</div>
 							<div class="card-list__card__button-wrapper">
 								<button class="card-list__card__button btn">Получить консультацию</button>
-								<a class="card-list__card__button btn btn--transparent" href="single-card.html">Подробнее о вкладе</a>
+								<a class="card-list__card__button btn btn--transparent"
+									href="single-card.html">Подробнее о вкладе</a>
 							</div>
 						</div>
 					</div>
@@ -240,11 +248,13 @@
 							</div>
 							<div class="card-list__card__button-wrapper">
 								<button class="card-list__card__button btn">Получить консультацию</button>
-								<a class="card-list__card__button btn btn--transparent" href="single-card.html">Подробнее о вкладе</a>
+								<a class="card-list__card__button btn btn--transparent"
+									href="single-card.html">Подробнее о вкладе</a>
 							</div>
 						</div>
 					</div>
-					<div class="card-list__card filtered" data-filtered-type="cumulative" data-readmore-identifier="card-list-readmore">
+					<div class="card-list__card filtered" data-filtered-type="cumulative"
+						data-readmore-identifier="card-list-readmore">
 						<div class="card-list__card__content-wrapper">
 							<div class="card-list__card__preview">
 								<img src="assets/img/images/gold-mastercard.png" alt="">
@@ -323,11 +333,13 @@
 							</div>
 							<div class="card-list__card__button-wrapper">
 								<button class="card-list__card__button btn">Получить консультацию</button>
-								<a class="card-list__card__button btn btn--transparent" href="single-card.html">Подробнее о вкладе</a>
+								<a class="card-list__card__button btn btn--transparent"
+									href="single-card.html">Подробнее о вкладе</a>
 							</div>
 						</div>
 					</div>
-					<div class="card-list__card filtered" data-filtered-type="pension" data-readmore-identifier="card-list-readmore">
+					<div class="card-list__card filtered" data-filtered-type="pension"
+						data-readmore-identifier="card-list-readmore">
 						<div class="card-list__card__content-wrapper">
 							<div class="card-list__card__preview">
 								<img src="assets/img/images/gold-mastercard.png" alt="">
@@ -406,7 +418,8 @@
 							</div>
 							<div class="card-list__card__button-wrapper">
 								<button class="card-list__card__button btn">Получить консультацию</button>
-								<a class="card-list__card__button btn btn--transparent" href="single-card.html">Подробнее о вкладе</a>
+								<a class="card-list__card__button btn btn--transparent"
+									href="single-card.html">Подробнее о вкладе</a>
 							</div>
 						</div>
 					</div>
@@ -422,8 +435,8 @@
 
 		</section>
 
-	<%= require('html-loader!./inc/footer.html') %>
+		<%= require('html-loader!./inc/footer.html') %>
 
-</body>
+			</body>
 
-</html>
+			</html>
