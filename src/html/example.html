@@ -1,84 +1,59 @@
-<section>
-    <div class="container">
-        <div class="breadcrumbs">
-            <div class="breadcrumbs__step"><a href=""></a></div>
-            <div class="breadcrumbs__step"><a href=""></a></div>
-            <div class="breadcrumbs__step"><a href=""></a></div>
-            <div class="breadcrumbs__step"><a href=""></a></div>
-        </div>
-    </div>
-</section>
-<section>
-    <div class="container">
-        <div class="page page--with-sidebar">
-            <div class="page__sidebar sidebar">
-                <div class="sidebar__overlay"></div>
-                <div class="sidebar__items">
-                    <div class="sidebar__item">
-                        <div class="sidebar__item-text">
-                            <a href="coins.html">Монеты</a>
+        <%= require('html-loader!./inc/header.html') %>
+        <%= require('html-loader!./inc/client-menu.html') %>
+        <div id="info" data-current-id="coins" data-main-menu-current-id="private-client-head"></div>
+<!-- Main content-->
+        <section>
+            <div class="container">
+                <div class="breadcrumbs">
+                    <div class="breadcrumbs__step"><a href="/">Главная</a></div>
+                    <div class="breadcrumbs__step"><a href="contributions.html">Частным клиентам</a></div>
+                    <div class="breadcrumbs__step"><span>Монеты</span></div>        
+                </div>
+            </div> 
+        </section>
+        <section>
+            <div class="container">
+                <div class="page">
+                   <div class="page__sidebar sidebar">
+                        <div class="sidebar__overlay"></div>
+                        <div class="sidebar__items">
+                            <div class="sidebar__item sidebar__item--selected">
+                                <div class="sidebar__item-text">
+                                    <a href="coins.html">Монеты</a>
+                                </div>
+                                <div class="sidebar__item-icon"></div>
+                            </div>
+                            <div class="sidebar__item">
+                                <div class="sidebar__item-text">
+                                    <a href="exchanges.html">Обмен валюты</a>
+                                </div>
+                                <div class="sidebar__item-icon"></div>
+                            </div>
                         </div>
-                        <div class="sidebar__item-icon"></div>
                     </div>
-                    <div class="sidebar__item sidebar__item--selected">
-                        <div class="sidebar__item-text">
-                            <a href="exchanges.html">Обмен валюты</a>
+                    <div class="page__content basic-page">
+                        <div class="basic-page__title  basic-page__title--hide-on-md">
+                            <h1>Монеты</h1>
                         </div>
-                        <div class="sidebar__item-icon"></div>
+                        <div class="basic-page__body contrib">
+                            <div class="contrib__filters contrib-filters">
+                                <span>Здесь будут фильтры</span>
+                            </div>
+                            <div class="contrib__cards contrib-cards">
+                                <div class="contrib-cards__wrap">
+                                    <div class="contrib-cards__card contrib-card">
+                                        <div class="contrib-card__wrap">
+                                            <div class="contrib-card__image"></div>
+                                            <div class="contrib-card__info"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!--Main Content -->
-        </div>
-    </div>
-</section>
-<!-- <section class="container">
-            <div class="second__header-operations">
-                <div class="second__text-credits__list">
-                    <a class="second__text-credits" href="#">Главная /</a>
-                    <a class="second__text-credits" href="contributions.html">Частным клиентам /</a>
-                    <a class="second__text-credits" href="contributions.html">Вклады и счета /</a>
-                    <a class="second__text-credits current-second__text-credits" href="contributions.html">Вклады</a>
-                </div>
-            </div>
-            <div class="operations">
-                <div class="dropdown">
-                    <button class="dropbtn">
-                        <p class="dropbtn-text">Вклады</p>
-                        <img class="dropdown__picture" src="assets/img/icons/ARROW.png" alt="arrow"
-                            class="operations__picture" width="20px" height="20px">
-                    </button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <ul class="operations__list__mobile">
-                            <li class="operations__list-item__mobile">
-                                <a href="contributions.html" class="operations__link__mobile">Вклады</a>
-                            </li>
-                            <li class="operations__list-item__mobile">
-                                <a href="settlement-service.html" class="operations__link__mobile">Расчетное
-                                    обслуживание</a>
-                            </li>
-                            <li class="operations__list-item__mobile">
-                                <a href="savingsaccount.html" class="operations__link__mobile">Накопительный счет</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="operations__item">
-                    <ul class="operations__list">
-                        <li class="operations__list-item current-operations__list-item">
-                            <a href="contributions.html" class="operations__link current-operations__link">Вклады</a>
-                            <img src="assets/img/images/arrow.png" alt="arrow" class="operations__picture" width="20px"
-                                height="20px">
-                        </li>
-                        <li class="operations__list-item">
-                            <a href="settlement-service.html" class="operations__link ">Расчетное обслуживание</a>
-                        </li>
-                        <li class="operations__list-item">
-                            <a href="savingsaccount.html" class="operations__link">Накопительный счет</a>
-
-                        </li>
-                    </ul>
-                </div>
-                
-            </div>
-        </section> -->
+        </section>
+        <%= require('html-loader!./inc/footer.html') %>
+    </body>
+</html>
