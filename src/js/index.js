@@ -262,7 +262,7 @@ $('body').on('click','#showmore.more',function(e){
 	$('.operations__documentation-kind.active>.operations__documentation-file.hide').each(function () {
 		$(this).removeClass('hide');
 	});
-	$('#showmore.more').addClass('less').removeClass('more').html('Скрыть<svg class="more-picture"><use href="./img/svg/sprite/symbol-defs.svg#icon-less" /></svg>');
+	$('#showmore.more').addClass('less').removeClass('more').html('Скрыть<svg class="more-picture"><use href="/assets/img/svg/sprite/symbol-defs.svg#icon-less" /></svg>');
 
 });
 
@@ -271,7 +271,7 @@ $('body').on('click','#showmore.less',function(e){
 	$('.operations__documentation-kind.active>.operations__documentation-file').filter('[data-show="no"]').each(function () {
 		$(this).addClass('hide');
 		});
-	$('#showmore.less').removeClass('less').addClass('more').html('Смотреть все<svg class="more-picture"><use href="./img/svg/sprite/symbol-defs.svg#icon-more" /></svg>');
+	$('#showmore.less').removeClass('less').addClass('more').html('Смотреть все<svg class="more-picture"><use href="/assets/img/svg/sprite/symbol-defs.svg#icon-more" /></svg>');
 });
 
 // accountopen.html for
